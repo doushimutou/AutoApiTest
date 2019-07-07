@@ -2,7 +2,9 @@ package com.auth.controller;
 
 import com.auth.entity.CaseApi;
 import com.auth.model.ApiResponse;
+import com.auth.model.TestResult;
 import com.auth.model.dto.CaseApiDTO;
+import com.auth.model.dto.CaseApiResponseDTO;
 import com.auth.service.CaseApiService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -84,6 +86,7 @@ public class CaseApiController {
 
     /**
      * 用例接口详情
+     *
      * @param project_id
      * @param case_id
      * @param api_id
@@ -100,4 +103,35 @@ public class CaseApiController {
         }
     }
 
+    /**
+     * 查看结果详情
+     *
+     * @param project_id
+     * @param case_id
+     * @param api_id
+     * @param host_id
+     * @return
+     */
+    @RequestMapping(value = "/automation/look_result", method = RequestMethod.GET)
+    @ResponseBody
+    public ApiResponse resultDetail(@RequestParam Integer project_id, @RequestParam Integer case_id, @RequestParam Integer api_id, @RequestParam Integer host_id) {
+        CaseApiDTO result = caseApiService.resultDetail(project_id, case_id, api_id, host_id);
+        if (result != null) {
+            return ApiResponse.success(result);
+        } else {
+            return ApiResponse.failed();
+        }
+
+    }
+
+    @RequestMapping(value = "/automation/get_correlation_response", method = RequestMethod.GET)
+    @ResponseBody
+    public ApiResponse getCollectionCaseApi(@RequestParam Integer project_id, @RequestParam Integer case_id, @RequestParam(required = false) Integer api_id) {
+        List<CaseApiResponseDTO> caseApis = caseApiService.getCollection(project_id, case_id, api_id);
+        if (caseApis.size() > 0) {
+            return ApiResponse.success(caseApis);
+        } else {
+            return ApiResponse.success();
+        }
+    }
 }

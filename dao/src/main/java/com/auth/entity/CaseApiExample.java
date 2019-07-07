@@ -875,6 +875,76 @@ public class CaseApiExample {
             return (Criteria) this;
         }
 
+        public Criteria andResponsedataIsNull() {
+            addCriterion("responseData is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataIsNotNull() {
+            addCriterion("responseData is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataEqualTo(String value) {
+            addCriterion("responseData =", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataNotEqualTo(String value) {
+            addCriterion("responseData <>", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataGreaterThan(String value) {
+            addCriterion("responseData >", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataGreaterThanOrEqualTo(String value) {
+            addCriterion("responseData >=", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataLessThan(String value) {
+            addCriterion("responseData <", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataLessThanOrEqualTo(String value) {
+            addCriterion("responseData <=", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataLike(String value) {
+            addCriterion("responseData like", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataNotLike(String value) {
+            addCriterion("responseData not like", value, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataIn(List<String> values) {
+            addCriterion("responseData in", values, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataNotIn(List<String> values) {
+            addCriterion("responseData not in", values, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataBetween(String value1, String value2) {
+            addCriterion("responseData between", value1, value2, "responsedata");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsedataNotBetween(String value1, String value2) {
+            addCriterion("responseData not between", value1, value2, "responsedata");
+            return (Criteria) this;
+        }
+
         public Criteria andAutocaseIdIsNull() {
             addCriterion("autoCase_id is null");
             return (Criteria) this;
@@ -932,6 +1002,66 @@ public class CaseApiExample {
 
         public Criteria andAutocaseIdNotBetween(Integer value1, Integer value2) {
             addCriterion("autoCase_id not between", value1, value2, "autocaseId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdIsNull() {
+            addCriterion("api_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdIsNotNull() {
+            addCriterion("api_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdEqualTo(Integer value) {
+            addCriterion("api_id =", value, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdNotEqualTo(Integer value) {
+            addCriterion("api_id <>", value, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdGreaterThan(Integer value) {
+            addCriterion("api_id >", value, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("api_id >=", value, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdLessThan(Integer value) {
+            addCriterion("api_id <", value, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdLessThanOrEqualTo(Integer value) {
+            addCriterion("api_id <=", value, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdIn(List<Integer> values) {
+            addCriterion("api_id in", values, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdNotIn(List<Integer> values) {
+            addCriterion("api_id not in", values, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdBetween(Integer value1, Integer value2) {
+            addCriterion("api_id between", value1, value2, "apiId");
+            return (Criteria) this;
+        }
+
+        public Criteria andApiIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("api_id not between", value1, value2, "apiId");
             return (Criteria) this;
         }
 

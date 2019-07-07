@@ -54,6 +54,9 @@ public class ApiResponse extends Result {
     public static ApiResponse success(Object data) {
         return new ApiResponse(Integer.valueOf(ErroCode.SUCCESS.getCode()), ErroCode.SUCCESS.getMessage(),data);
     }
+    public static ApiResponse success() {
+        return new ApiResponse(Integer.valueOf(ErroCode.SUCCESS.getCode()), ErroCode.SUCCESS.getMessage());
+    }
     public static ApiResponse failed() {
         return new ApiResponse(Integer.valueOf(ErroCode.FAILED.getCode()), ErroCode.FAILED.getMessage());
     }

@@ -30,6 +30,18 @@ public class CaseApiDTO extends CaseApi {
      * 批量添加已存在的接口
      */
     List<Integer> ids;
+    /**
+     * 用例实际请求的url
+     */
+    String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public List<Integer> getIds() {
         return ids;

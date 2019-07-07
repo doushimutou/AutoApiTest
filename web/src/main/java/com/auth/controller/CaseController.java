@@ -1,7 +1,10 @@
 package com.auth.controller;
 
+
 import com.auth.entity.TestCase;
 import com.auth.model.ApiResponse;
+import com.auth.model.TestResult;
+import com.auth.model.dto.StartTestDTO;
 import com.auth.service.CaseService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -58,6 +61,17 @@ public class CaseController {
         return apiResponse;
     }
 
+    /**
+     * 开始测试
+     * @param startTestDTO
+     * @return
+     */
+    @RequestMapping(value = "/automation/start_test", method = RequestMethod.POST)
+    @ResponseBody
+    public ApiResponse startTest(@RequestBody StartTestDTO startTestDTO) {
+        ApiResponse result = caseService.startTest(startTestDTO);
+        return result;
+    }
 
 
 }
